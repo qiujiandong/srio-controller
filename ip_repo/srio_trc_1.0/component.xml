@@ -625,7 +625,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.nread_irq" xilinx:dependency="$TX_ONLY = 0">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.nread_irq" xilinx:dependency="$TX_ONLY = 0">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -686,7 +686,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>8c4d4034</spirit:value>
+            <spirit:value>824e2c17</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -702,7 +702,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>8c4d4034</spirit:value>
+            <spirit:value>824e2c17</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1837,7 +1837,7 @@
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
         <spirit:name>TX_ONLY</spirit:name>
         <spirit:displayName>Tx Only</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.TX_ONLY" spirit:bitStringLength="1">&quot;1&quot;</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.TX_ONLY" spirit:bitStringLength="1">&quot;0&quot;</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_DEV_ID</spirit:name>
@@ -1901,7 +1901,7 @@
       <spirit:file>
         <spirit:name>src/srio_trc.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_4a545b23</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_90143a01</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1960,7 +1960,7 @@
     <spirit:parameter>
       <spirit:name>TX_ONLY</spirit:name>
       <spirit:displayName>Transmit Only</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.TX_ONLY" spirit:choiceRef="choice_pairs_bf0abbc3" spirit:bitStringLength="1">&quot;1&quot;</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.TX_ONLY" spirit:choiceRef="choice_pairs_bf0abbc3" spirit:bitStringLength="1">&quot;0&quot;</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_DEV_ID</spirit:name>
@@ -2012,11 +2012,11 @@
       </xilinx:taxonomies>
       <xilinx:displayName>SRIO Tranceiving Controller</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:coreRevision>4</xilinx:coreRevision>
+      <xilinx:coreRevision>7</xilinx:coreRevision>
       <xilinx:upgrades>
         <xilinx:canUpgradeFrom>xilinx.com:user:srio_trc:1.0</xilinx:canUpgradeFrom>
       </xilinx:upgrades>
-      <xilinx:coreCreationDateTime>2021-12-16T12:37:07Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2022-05-17T09:08:20Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@6d6ed45_ARCHIVE_LOCATION">d:/PrjXilinx/ip_repo/srio_trc_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@2da6d233_ARCHIVE_LOCATION">d:/PrjXilinx/ip_repo/srio_trc_1.0</xilinx:tag>
@@ -2158,17 +2158,38 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@55164347_ARCHIVE_LOCATION">d:/PrjXilinx/ip_repo/srio_trc_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@27f32ff8_ARCHIVE_LOCATION">d:/PrjXilinx/ip_repo/srio_trc_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@d129fc3_ARCHIVE_LOCATION">d:/PrjXilinx/ip_repo/srio_trc_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23f991bb_ARCHIVE_LOCATION">d:/PrjXilinx/ip_repo/srio_trc_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27ad45fd_ARCHIVE_LOCATION">d:/PrjXilinx/ip_repo/srio_trc_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ed93c84_ARCHIVE_LOCATION">d:/PrjXilinx/ip_repo/srio_trc_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3be90afa_ARCHIVE_LOCATION">d:/PrjXilinx/ip_repo/srio_trc_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f2b90fd_ARCHIVE_LOCATION">d:/PrjXilinx/ip_repo/srio_trc_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ed12b09_ARCHIVE_LOCATION">d:/PrjXilinx/ip_repo/srio_trc_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@108db13b_ARCHIVE_LOCATION">d:/PrjXilinx/ip_repo/srio_trc_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4cbec07d_ARCHIVE_LOCATION">d:/PrjXilinx/ip_repo/srio_trc_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@595c62a9_ARCHIVE_LOCATION">d:/PrjXilinx/ip_repo/srio_trc_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fc0962c_ARCHIVE_LOCATION">d:/PrjXilinx/ip_repo/srio_trc_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7323e160_ARCHIVE_LOCATION">d:/PrjXilinx/ip_repo/srio_trc_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b1ea279_ARCHIVE_LOCATION">d:/PrjXilinx/ip_repo/srio_trc_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@420a1c05_ARCHIVE_LOCATION">d:/PrjXilinx/ip_repo/srio_trc_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48fc9911_ARCHIVE_LOCATION">d:/PrjXilinx/ip_repo/srio_trc_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13cedf4_ARCHIVE_LOCATION">d:/PrjXilinx/ip_repo/srio_trc_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40191002_ARCHIVE_LOCATION">d:/PrjXilinx/ip_repo/srio_trc_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@141205c4_ARCHIVE_LOCATION">d:/PrjXilinx/ip_repo/srio_trc_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1955ee76_ARCHIVE_LOCATION">d:/PrjXilinx/ip_repo/srio_trc_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2eacde41_ARCHIVE_LOCATION">d:/PrjXilinx/ip_repo/srio_trc_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@abd02fe_ARCHIVE_LOCATION">d:/PrjXilinx/ip_repo/srio_trc_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3542ca00_ARCHIVE_LOCATION">d:/PrjXilinx/ip_repo/srio_trc_1.0</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.2</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="3a17ac1b"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="3beb30fb"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="1387f2f3"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="2558034d"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="fc786400"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="906c5e39"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="72cc61e4"/>
-      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="f09cb6b7"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="6232f76a"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="5c2d5e8f"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="47491d85"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

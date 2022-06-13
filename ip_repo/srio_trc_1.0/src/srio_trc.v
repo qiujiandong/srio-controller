@@ -21,7 +21,7 @@
 
 
 module srio_trc#(
-    parameter [0:0] TX_ONLY = 1'b1,
+    parameter [0:0] TX_ONLY = 1'b0,
     parameter [15:0] C_DEV_ID = 16'hF201,
     parameter [15:0] C_DEST_ID = 16'h7801,
     parameter AXIL_DW = 32,
@@ -471,6 +471,7 @@ module srio_trc#(
                 .srcAddr                 ( srcAddr               ),
                 .dstAddr                 ( dstAddr               ),
                 .size_dw                 ( size_dw               ),
+                .doorbell_info           ( doorbell_info        ),
                 .m_axis_ireq_tready      ( m_axis_ireq_tready    ),
                 .s_axis_iresp_tvalid     ( s_axis_iresp_tvalid   ),
                 .s_axis_iresp_tdata      ( s_axis_iresp_tdata    ),

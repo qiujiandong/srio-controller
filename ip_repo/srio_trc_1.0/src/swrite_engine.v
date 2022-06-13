@@ -111,8 +111,8 @@ module swrite_engine(
             swrite_beats_tail <= 'b0;
         end
         else if(swrite_start) begin 
-            read_slice <= size_dw >> 4;
-            swrite_slice <= size_dw >> 5;
+            read_slice <= size_dw >> 4; // max burst len is 16, slice read data into slices
+            swrite_slice <= size_dw >> 5; // swrite max is 256 bytes every package
             db_info <= doorbell_info;
             read_beats_tail <= size_dw[3:0];
             swrite_beats_tail <= size_dw[4:0];
@@ -354,14 +354,14 @@ module swrite_engine(
         end
         else if(cstate == DOORBELL) begin
             ireq_tvalid = 1'b1;
-            ireq_tdata = {8'h10, DOORB, 1'b0, pri, CRF, 12'b0, db_info, 16'b0};
+            ireq_tdata = {8'h81, DOORB, 1'b0, pri, CRF, 12'b0, db_info, 16'b0};
         end
     end
 
 // end of ireq signals
 
 // iresp signals
-    assign is_swdb_response = (s_axis_iresp_tdata[63:48] == 16'h10D0)? 1'b1: 1'b0;
+    assign is_swdb_response = (s_axis_iresp_tdata[63:48] == 16'h81D0)? 1'b1: 1'b0;
     assign s_axis_iresp_tready = iresp_tready;
     assign swrite_finish = iresp_tready;
 
@@ -387,7 +387,7 @@ module swrite_engine(
             irq_cnt <= 2'b0;
         end
         else begin
-            if(iresp_tready || irq_cnt) begin
+            if(is_swdb_response || irq_cnt) begin
                 irq_cnt <= irq_cnt + 2'b1;
             end
         end
